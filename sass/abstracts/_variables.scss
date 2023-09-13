@@ -1,0 +1,14 @@
+// COLORS
+
+$color-primary-dark: #005bbc;
+$color-primary-light: #29abe2;
+
+$color-secondary-blue: #1868ed;
+$color-secondary-purple: #662d91;
+
+$gradient-primary-right: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+$gradient-primary-bottom: linear-gradient(to bottom, $color-primary-light, $color-primary-dark);
+$gradient-text: linear-gradient(to right, $color-secondary-blue, $color-secondary-purple);
+$gradient-body: linear-gradient(to bottom, $color-primary-light, #005bbc, #801dff);
+
+$color-white: white;

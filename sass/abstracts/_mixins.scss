@@ -1,0 +1,4 @@
+// GRADIENTS
+
+@mixin gradient-body { background-image: linear-gradient(to bottom, $color-primary-light, #005bbc, #801dff); }   
+@mixin gradient-text { background-image: linear-gradient(to right, $color-secondary-blue, $color-secondary-purple); }   
