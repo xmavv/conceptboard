@@ -1,25 +1,33 @@
 .header {
     height: 95vh;
+    overflow-x: hidden;
 
     &__nav {
+        // position: fixed;
+        // width: 100%;
         font-family: "myriad-pro", sans-serif;
-        font-weight: 400;
         font-style: normal;
 
-        height: 8vh;
-        min-height: 5.5rem;
+        height: 7vh;
+        min-height: 6rem;
         display: flex;
         justify-content: space-between;
-        padding: 2rem 1rem;
+        padding: 1rem 1rem;
         background-color: $color-white;
+
+        box-shadow: 0 .5rem .2rem rgba($color: #000000, $alpha: .2);
+        z-index: 1;
 
         &-img {
             width: 5rem;
+            position: relative;
+            top: 0;
         }
 
         &-text {
             font-size: 2rem;
-            font-weight: 400;
+            font-weight: 500;
+            margin-top: 1rem;
             
             a{
                 margin: 0 1.5rem;
@@ -35,15 +43,23 @@
                 }
                 
                 &:nth-child(6) {
+                    padding: 1rem;
                     font-weight: 600;
                     padding-left: 3rem;
                     margin: 0;
-                    border-left: 3px solid $color-primary-light;
+                    border-left: 3px solid $color-primary-dark;
                     background-image: $gradient-primary-bottom;
                     color: black;
                     -webkit-background-clip: text;
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
+
+                    &:hover {
+                        background-image: $gradient-primary-right-lighter;
+                        background-size: 150% 150%;
+                        animation: color 3s ease-in-out;
+                        animation-iteration-count: infinite;
+                    }
                 }
             }
 
@@ -55,11 +71,16 @@
     
     &__container {
         position: relative;
-        height: 87vh;
+        // margin: 7vh;
+        height: 88vh;
 
         &-line {
             position: absolute;
+            width: 100%;
             z-index: -1;
+            top: -13%;
+            left: 1%;
+            
         }
 
         &-board {
@@ -68,16 +89,43 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            transition: all .3s ease;
+
+            &:hover {
+                transform: translate(-52%, -48%);
+
+                .header__container-board-img--shade {
+                    transform: translate(0, 0);
+                }
+
+                .heading-primary--gradient {
+                    background-image: $gradient-text-lighter;
+                    background-size: 150% 150%;
+                    animation: colorText 5s ease-in-out;
+                    animation-iteration-count: infinite;
+                }
+            }
 
             &-img {
                 width: 100%;
                 // max-width: 100%;
+
+                &--shade {
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    transform: translate(-2%, 2%);
+                    z-index: -1;
+                    opacity: .2;
+                    transition: .3s ease;
+                }
             }
         }
 
         &-text {
             width: 100%;
-            padding: 3rem 5rem;
+            padding: 3rem 3rem;
             position: absolute;
             top: 0;
             left: 0;
@@ -86,26 +134,33 @@
 
         &-try {
             position: absolute;
-            left: 15rem;
-            top: 4rem;
+            width: 14%;
+            left: 13%;
+            top: 5%;
 
             &-arr {
                 position: absolute;
-                left: 33rem;
-                top: 30rem;
+                width: 6%;
+                left: 23%;
+                top: 40%;
             }
         }
 
         &-click {
             position: absolute;
-            right: 15rem;
-            bottom: 12rem;
-
+            width: 15%;
+            right: 14%;
+            bottom: 18%;
+            
             &-arr {
                 position: absolute;
-                right: 35rem;
-                bottom: 32rem;
+                width: 6%;
+                right: 22%;
+                bottom: 42%;
             }
         }
+    }
+
+    &-draw-box {
     }
 }
