@@ -13,10 +13,41 @@ body {
   background-image: linear-gradient(to bottom, #29abe2, #005bbc);
   background-size: cover; }
 
-body {
-  font-family: "myriad-pro", sans-serif;
-  font-weight: 400;
-  font-style: normal; }
+.heading-primary {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 300;
+  font-size: 3.7vw; }
+  .heading-primary--main {
+    display: block; }
+  .heading-primary--sub {
+    display: block;
+    line-height: 1.1; }
+  .heading-primary--gradient {
+    font-size: 5.5vw;
+    font-weight: 700;
+    display: block;
+    background-image: linear-gradient(to right, #1868ed, #662d91);
+    color: black;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  .heading-primary span {
+    display: block; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 5rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
+
+.u-margin-top-medium {
+  margin-top: 3rem; }
+
+.u-margin-top-small {
+  margin-top: 2rem; }
+
+.u-font-size-big {
+  font-size: 10rem; }
 
 .btn {
   color: white;
@@ -27,7 +58,10 @@ body {
 .header {
   height: 95vh; }
   .header__nav {
-    height: 7vh;
+    font-family: "myriad-pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    height: 8vh;
     min-height: 5.5rem;
     display: flex;
     justify-content: space-between;
@@ -37,7 +71,7 @@ body {
       width: 5rem; }
     .header__nav-text {
       font-size: 2rem;
-      font-weight: 500; }
+      font-weight: 400; }
       .header__nav-text a {
         margin: 0 1.5rem;
         text-decoration: none; }
@@ -59,20 +93,39 @@ body {
       .header__nav-text-img {
         margin-left: 4rem; }
   .header__container {
-    height: 88vh;
-    position: relative; }
+    position: relative;
+    height: 87vh; }
     .header__container-line {
       position: absolute;
       z-index: -1; }
     .header__container-board {
+      position: relative;
       width: 45%;
-      position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
       .header__container-board-img {
-        width: 100%;
-        max-width: 100%; }
+        width: 100%; }
     .header__container-text {
+      width: 100%;
+      padding: 3rem 5rem;
       position: absolute;
-      top: 0; }
+      top: 0;
+      left: 0;
+      text-align: center; }
+    .header__container-try {
+      position: absolute;
+      left: 15rem;
+      top: 4rem; }
+      .header__container-try-arr {
+        position: absolute;
+        left: 33rem;
+        top: 30rem; }
+    .header__container-click {
+      position: absolute;
+      right: 15rem;
+      bottom: 12rem; }
+      .header__container-click-arr {
+        position: absolute;
+        right: 35rem;
+        bottom: 32rem; }

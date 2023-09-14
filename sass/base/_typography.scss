@@ -1,16 +1,29 @@
-body {
-    font-family: "myriad-pro", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
 .heading-primary {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+    font-size: 3.7vw;
 
     &--main {
-
+        display: block;
     }
 
     &--sub {
-        
+        display: block;
+        line-height: 1.1;
+    }
+
+    &--gradient {
+        font-size: 5.5vw;
+        font-weight: 700;
+        display: block;
+        background-image: $gradient-text;
+        color: black;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    span {
+        display: block;
     }
 }

@@ -2,7 +2,11 @@
     height: 95vh;
 
     &__nav {
-        height: 7vh;
+        font-family: "myriad-pro", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+        height: 8vh;
         min-height: 5.5rem;
         display: flex;
         justify-content: space-between;
@@ -15,7 +19,7 @@
 
         &-text {
             font-size: 2rem;
-            font-weight: 500;
+            font-weight: 400;
             
             a{
                 margin: 0 1.5rem;
@@ -50,8 +54,8 @@
     }
     
     &__container {
-        height: 88vh;
         position: relative;
+        height: 87vh;
 
         &-line {
             position: absolute;
@@ -59,15 +63,48 @@
         }
 
         &-board {
+            position: relative;
             width: 45%;
-            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
 
             &-img {
                 width: 100%;
-                max-width: 100%;
+                // max-width: 100%;
+            }
+        }
+
+        &-text {
+            width: 100%;
+            padding: 3rem 5rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+        }
+
+        &-try {
+            position: absolute;
+            left: 15rem;
+            top: 4rem;
+
+            &-arr {
+                position: absolute;
+                left: 33rem;
+                top: 30rem;
+            }
+        }
+
+        &-click {
+            position: absolute;
+            right: 15rem;
+            bottom: 12rem;
+
+            &-arr {
+                position: absolute;
+                right: 35rem;
+                bottom: 32rem;
             }
         }
     }
