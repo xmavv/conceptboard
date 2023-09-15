@@ -57,7 +57,8 @@ body {
     color: black;
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent; }
+    -webkit-text-fill-color: transparent;
+    transition: all .3s ease-in-out; }
   .heading-primary span {
     display: block; }
 
@@ -86,22 +87,22 @@ body {
   color: white;
   font-weight: 600;
   padding: .7rem 1.1rem;
-  background-image: linear-gradient(to right, #29abe2, #005bbc);
-  border-radius: 2rem; }
+  background-color: #005bbc;
+  border-radius: 2rem;
+  transition: all .2s ease-in-out; }
   .btn:hover {
-    background-image: linear-gradient(to right, #56bde8, #004289);
-    background-size: 150% 150%;
-    animation: color 3s ease-in-out;
-    animation-iteration-count: infinite; }
+    background-color: #29abe2; }
 
 .animate {
   animation: smoothShake 7s ease-in-out infinite;
   animation-fill-mode: both; }
 
 .header {
-  height: 95vh;
+  height: 100vh;
   overflow-x: hidden; }
   .header__nav {
+    position: fixed;
+    width: 100%;
     font-family: "myriad-pro", sans-serif;
     font-style: normal;
     height: 7vh;
@@ -134,26 +135,30 @@ body {
           padding-left: 3rem;
           margin: 0;
           border-left: 3px solid #005bbc;
+          border-right: 3px solid transparent;
           background-image: linear-gradient(to bottom, #29abe2, #005bbc);
           color: black;
           -webkit-background-clip: text;
           background-clip: text;
-          -webkit-text-fill-color: transparent; }
+          -webkit-text-fill-color: transparent;
+          transition: all .2s ease-in-out; }
           .header__nav-text a:nth-child(6):hover {
-            background-image: linear-gradient(to right, #56bde8, #004289);
-            background-size: 150% 150%;
-            animation: color 3s ease-in-out;
-            animation-iteration-count: infinite; }
+            padding: .7rem 1.1rem;
+            background-color: #005bbc;
+            border-radius: 2rem;
+            border-left: 3px solid #005bbc;
+            border-right: 3px solid #005bbc; }
       .header__nav-text-img {
         margin-left: 4rem; }
   .header__container {
     position: relative;
+    margin-top: 7vh;
     height: 88vh; }
     .header__container-line {
       position: absolute;
       width: 100%;
       z-index: -1;
-      top: -13%;
+      top: -18%;
       left: 1%; }
     .header__container-board {
       position: relative;
@@ -167,9 +172,10 @@ body {
         .header__container-board:hover .header__container-board-img--shade {
           transform: translate(0, 0); }
         .header__container-board:hover .heading-primary--gradient {
-          background-image: linear-gradient(to right, #1969ed, #652d90);
-          background-size: 150% 150%;
-          animation: colorText 5s ease-in-out;
+          transform: scale(1.1);
+          background-image: linear-gradient(to right, #18e2f8, #ff0deb);
+          background-size: 200% 200%;
+          animation: colorText 5s ease-out;
           animation-iteration-count: infinite; }
       .header__container-board-img {
         width: 100%; }

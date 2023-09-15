@@ -1,14 +1,14 @@
 .btn {
-    color: white;
+    color: $color-white;
     font-weight: 600;
+
     padding: .7rem 1.1rem;
-    background-image: $gradient-primary-right;
+    background-color: $color-primary-dark;
     border-radius: 2rem;
 
+    transition: all .2s ease-in-out;
+    
     &:hover {
-        background-image: $gradient-primary-right-lighter;
-        background-size: 150% 150%;
-        animation: color 3s ease-in-out;
-        animation-iteration-count: infinite;
+        background-color: $color-primary-light;
     }
 }

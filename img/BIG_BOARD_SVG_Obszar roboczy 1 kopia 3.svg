@@ -4,16 +4,7 @@
 	 width="2021.765px" height="1672.177px" viewBox="0 0 2021.765 1672.177" enable-background="new 0 0 2021.765 1672.177"
 	 xml:space="preserve">
 <g id="bg">
-	<g id="Warstwa_9">
-	</g>
-	<g id="particles">
-	</g>
-	
 		<line display="none" fill="none" stroke="#005BBC" stroke-width="3" stroke-miterlimit="10" x1="228.765" y1="495.307" x2="2148.765" y2="495.307"/>
-</g>
-<g id="IMAGES">
-</g>
-<g id="icon">
 </g>
 <g id="board">
 	<g>
@@ -25,10 +16,5 @@
 			V219.279C2021.765,103.231,1927.689,9.157,1811.641,9.157z"/>
 	</g>
 </g>
-<g id="sketch">
-</g>
-<g id="text">
-</g>
-<g id="ruler" display="none">
-</g>
+
 </svg>

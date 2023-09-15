@@ -1,10 +1,10 @@
 .header {
-    height: 95vh;
+    height: 100vh;
     overflow-x: hidden;
 
     &__nav {
-        // position: fixed;
-        // width: 100%;
+        position: fixed;
+        width: 100%;
         font-family: "myriad-pro", sans-serif;
         font-style: normal;
 
@@ -48,17 +48,20 @@
                     padding-left: 3rem;
                     margin: 0;
                     border-left: 3px solid $color-primary-dark;
+                    border-right: 3px solid transparent;
                     background-image: $gradient-primary-bottom;
                     color: black;
                     -webkit-background-clip: text;
                     background-clip: text;
                     -webkit-text-fill-color: transparent;
+                    transition: all .2s ease-in-out;
 
                     &:hover {
-                        background-image: $gradient-primary-right-lighter;
-                        background-size: 150% 150%;
-                        animation: color 3s ease-in-out;
-                        animation-iteration-count: infinite;
+                        padding: .7rem 1.1rem;
+                        background-color: $color-primary-dark;
+                        border-radius: 2rem;
+                        border-left: 3px solid $color-primary-dark;
+                        border-right: 3px solid $color-primary-dark;
                     }
                 }
             }
@@ -71,14 +74,14 @@
     
     &__container {
         position: relative;
-        // margin: 7vh;
+        margin-top: 7vh;
         height: 88vh;
 
         &-line {
             position: absolute;
             width: 100%;
             z-index: -1;
-            top: -13%;
+            top: -18%;
             left: 1%;
             
         }
@@ -99,9 +102,10 @@
                 }
 
                 .heading-primary--gradient {
+                    transform: scale(1.1);
                     background-image: $gradient-text-lighter;
-                    background-size: 150% 150%;
-                    animation: colorText 5s ease-in-out;
+                    background-size: 200% 200%;
+                    animation: colorText 5s ease-out;
                     animation-iteration-count: infinite;
                 }
             }
