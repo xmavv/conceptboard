@@ -25,6 +25,28 @@
   50% {
     background-position: 0 50%; } }
 
+@keyframes clickBoard {
+  0%,
+  45%,
+  55%,
+  100% {
+    top: 50%;
+    left: 50%; }
+  50% {
+    top: 51%;
+    left: 49%; } }
+
+@keyframes clickShade {
+  0%,
+  45%,
+  55%,
+  100% {
+    top: 0;
+    left: 0; }
+  50% {
+    top: -2%;
+    left: 2%; } }
+
 *,
 *::after,
 *::before {
@@ -159,7 +181,8 @@ body {
       width: 100%;
       z-index: -1;
       top: -18%;
-      left: 1%; }
+      left: 1%;
+      fill: #000000; }
     .header__container-board {
       position: relative;
       width: 45%;
@@ -167,6 +190,12 @@ body {
       left: 50%;
       transform: translate(-50%, -50%);
       transition: all .3s ease; }
+      .header__container-board:not(:hover) {
+        animation: clickBoard 8s ease;
+        animation-iteration-count: infinite; }
+        .header__container-board:not(:hover) .header__container-board-img--shade {
+          animation: clickShade 8s ease;
+          animation-iteration-count: infinite; }
       .header__container-board:hover {
         transform: translate(-52%, -48%); }
         .header__container-board:hover .header__container-board-img--shade {
@@ -215,3 +244,10 @@ body {
         width: 6%;
         right: 22%;
         bottom: 42%; }
+
+.siema {
+  fill: #ffffffff;
+  stroke: #000;
+  stroke-width: 5px;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000; }

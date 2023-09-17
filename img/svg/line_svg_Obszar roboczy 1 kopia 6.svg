@@ -1,46 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.typekit.net/bbb8ojv.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&family=Space+Grotesk:wght@500&display=swap');
-    </style>
-    <link rel="stylesheet" href="css/style.css">
-    <title>Conceptboard!</title>
-</head>
-<body>
-    <header class="header">
-        <nav class="header__nav">
-            <a href="https://www.behance.net/gallery/178040589/Conceptboard-redesign" target="_blank"><img src="img/svg/CONCEPTBOARD.svg" alt="#" class="header__nav-img"></a>
-            <div class="header__nav-text">
-                <a href="https://www.behance.net/gallery/178040589/Conceptboard-redesign" target="_blank">Plans</a>
-                <a href="https://www.behance.net/gallery/178040589/Conceptboard-redesign" target="_blank">Security</a>
-                <a href="https://www.behance.net/gallery/178040589/Conceptboard-redesign" target="_blank">Company</a>
-                <img src="img/png/eng.png" alt="" class="header__nav-text-img">
-                <a href="https://www.behance.net/gallery/178040589/Conceptboard-redesign" target="_blank">ENG</a> 
-                <a href="https://www.behance.net/gallery/178040589/Conceptboard-redesign" target="_blank">Log in</a>
-                <a href="https://www.behance.net/gallery/178040589/Conceptboard-redesign" target="_blank" class="btn">Sing up</a>
-            </div>
-        </nav>
-
-
-        <div class="header__container">
-            <div class="header__container-line">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1920px"
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.9.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1920px"
 	 height="2167.519px" viewBox="0 0 1920 2167.519" enable-background="new 0 0 1920 2167.519" xml:space="preserve">
 <g id="bg">
 	<g id="particles">
 		<g>
 			<g>
-				<path class="siema" fill="#EF990F" d="M1358.861,593.314c-1.114,0-2.216-0.331-3.025-1.591l0.089-3.92l5.715,4.042l-2.858-2.021l3.018-1.762
+				<path fill="#EF990F" d="M1358.861,593.314c-1.114,0-2.216-0.331-3.025-1.591l0.089-3.92l5.715,4.042l-2.858-2.021l3.018-1.762
 					c-0.777-1.324-2.191-1.811-3.183-1.709c0.438-0.046,2.52-0.438,4.931-0.891c1.741-0.327,3.881-0.729,6.393-1.191l1.265,6.885
 					c-2.501,0.459-4.632,0.86-6.365,1.186c-1.759,0.331-3.114,0.585-4.034,0.747
 					C1360.195,593.197,1359.526,593.314,1358.861,593.314z"/>
 			</g>
 			<g>
-				<path class="siema" fill="#EF990F" d="M1968.767,2161.719c-7.189-3.699-14.402-7.491-21.438-11.271l3.313-6.166
+				<path fill="#EF990F" d="M1968.767,2161.719c-7.189-3.699-14.402-7.491-21.438-11.271l3.313-6.166
 					c6.999,3.76,14.175,7.533,21.328,11.213L1968.767,2161.719z M1926.099,2138.791c-7.031-3.945-14.099-8-21.007-12.053
 					l3.542-6.037c6.87,4.029,13.899,8.062,20.891,11.985L1926.099,2138.791z M1884.322,2114.276
 					c-6.883-4.223-13.787-8.556-20.518-12.878l3.783-5.891c6.691,4.298,13.552,8.604,20.395,12.802L1884.322,2114.276z
@@ -103,7 +75,7 @@
 			</g>
 		</g>
 		<g>
-			<path class="siema" fill="#EF990F" d="M469.222,556.951c-7.843-0.105-15.966-0.364-24.142-0.77l0.346-6.991
+			<path fill="#EF990F" d="M469.222,556.951c-7.843-0.105-15.966-0.364-24.142-0.77l0.346-6.991
 				c8.092,0.401,16.13,0.657,23.89,0.762L469.222,556.951z M493.366,556.79l-0.197-6.997c8.216-0.231,16.219-0.652,23.789-1.251
 				l0.552,6.979C509.823,556.129,501.7,556.555,493.366,556.79z M420.991,554.593c-7.909-0.649-15.991-1.436-24.019-2.338
 				l0.782-6.956c7.959,0.895,15.97,1.675,23.81,2.318L420.991,554.593z M373.037,549.21c-7.908-1.121-15.928-2.374-23.836-3.724
@@ -127,44 +99,3 @@
 	</g>
 </g>
 </svg>
-            </div>
-
-            <div class="header__container-board">
-                    <img src="img/svg/BIG_BOARD_SVG_Obszar roboczy 1 kopia 3.svg" alt="" class="header__container-board-img">
-                    <img src="img/svg/BIG_BOARD_SVG_SHADE_Obszar roboczy 1 kopia 3.svg" alt="" class="header__container-board-img--shade">
-
-                <div class="header__container-text u-margin-top-small-res">
-                    <h1 class="heading-primary">
-                        <span class="heading-primary--main u-margin-bottom-medium-res">Give Your ideas <span>a safe place to grow.</span></span>
-                        <span class="heading-primary--sub">
-                            Give them a
-                            <span class="heading-primary--gradient">
-                                Conceptboard
-                            </span>
-                        </span>
-                    </h1>
-                </div>
-            </div>
-
-                <!-- chcemy wjazd animacje jakas i typing text na poczatku -->
-
-            <div class=" header__container-draw-box">
-                <img src="img/png/TRY_NOW.png" alt="" class="header__container-try animate">
-                <img src="img/png/CLICK.png" alt="" class="header__container-click animate">
-            </div>
-            <div class=" header__container-draw-box">
-                <img src="img/png/ARROW_TRY_NOW.png" alt="" class="header__container-try-arr animate">
-                <img src="img/png/ARROW_CLICK.png" alt="" class="header__container-click-arr animate">
-            </div>
-        </div>
-    </header>
-
-    <main>
-
-    </main>
-
-    <footer>
-
-    </footer>
-</body>
-</html>

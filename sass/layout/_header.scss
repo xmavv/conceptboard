@@ -83,7 +83,7 @@
             z-index: -1;
             top: -18%;
             left: 1%;
-            
+            fill: #000000;
         }
 
         &-board {
@@ -93,6 +93,16 @@
             left: 50%;
             transform: translate(-50%, -50%);
             transition: all .3s ease;
+
+            &:not(:hover) {
+                animation: clickBoard 8s ease;
+                animation-iteration-count: infinite;
+
+                .header__container-board-img--shade {
+                    animation: clickShade 8s ease;
+                    animation-iteration-count: infinite;
+                }
+            }
 
             &:hover {
                 transform: translate(-52%, -48%);
@@ -167,4 +177,12 @@
 
     &-draw-box {
     }
+}
+
+.siema {
+    fill: #ffffffff;
+    stroke: #000;
+    stroke-width: 5px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
 }
