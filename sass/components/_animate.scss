@@ -2,3 +2,9 @@
     animation: smoothShake 7s ease-in-out infinite;
     animation-fill-mode: both;
 }
+
+.animate-reverse {
+    animation: smoothShake 7s ease-in-out infinite;
+    animation-fill-mode: both;
+    animation-direction: reverse;
+}

@@ -75,12 +75,15 @@ body {
     font-size: 5vw;
     font-weight: 700;
     display: block;
-    background-image: linear-gradient(to right, #1868ed, #662d91);
     color: black;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: all .3s ease-in-out; }
+    transition: all .3s ease-in-out;
+    background-size: 200% 200%;
+    animation: colorText 5s ease-out;
+    animation-iteration-count: infinite;
+    background-image: linear-gradient(to right, #18e2f8, #ff0deb); }
   .heading-primary span {
     display: block; }
 
@@ -118,6 +121,11 @@ body {
 .animate {
   animation: smoothShake 7s ease-in-out infinite;
   animation-fill-mode: both; }
+
+.animate-reverse {
+  animation: smoothShake 7s ease-in-out infinite;
+  animation-fill-mode: both;
+  animation-direction: reverse; }
 
 .header {
   height: 100vh;
@@ -180,7 +188,7 @@ body {
       position: absolute;
       width: 100%;
       z-index: -1;
-      top: -18%;
+      top: -23%;
       left: 1%;
       fill: #000000; }
     .header__container-board {
@@ -192,20 +200,19 @@ body {
       transition: all .3s ease; }
       .header__container-board:not(:hover) {
         animation: clickBoard 8s ease;
-        animation-iteration-count: infinite; }
+        animation-iteration-count: infinite;
+        animation-delay: -1.3s; }
         .header__container-board:not(:hover) .header__container-board-img--shade {
           animation: clickShade 8s ease;
-          animation-iteration-count: infinite; }
+          animation-iteration-count: infinite;
+          animation-delay: -1.3s; }
       .header__container-board:hover {
         transform: translate(-52%, -48%); }
         .header__container-board:hover .header__container-board-img--shade {
           transform: translate(0, 0); }
         .header__container-board:hover .heading-primary--gradient {
-          transform: scale(1.1);
-          background-image: linear-gradient(to right, #18e2f8, #ff0deb);
-          background-size: 200% 200%;
-          animation: colorText 5s ease-out;
-          animation-iteration-count: infinite; }
+          transform: scale(1.03);
+          background-image: linear-gradient(to right, #1868ed, #662d91); }
       .header__container-board-img {
         width: 100%; }
         .header__container-board-img--shade {
@@ -246,8 +253,14 @@ body {
         bottom: 42%; }
 
 .siema {
-  fill: #ffffffff;
-  stroke: #000;
-  stroke-width: 5px;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000; }
+  stroke-dashoffset: 10000;
+  stroke-dasharray: 10000;
+  animation: stroke 2s forwards ease; }
+
+@keyframes stroke {
+  from {
+    stroke-dashoffset: 3000;
+    stroke-dasharray: 3000; }
+  to {
+    stroke-dashoffset: 40;
+    stroke-dasharray: 40; } }

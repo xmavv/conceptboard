@@ -81,7 +81,7 @@
             position: absolute;
             width: 100%;
             z-index: -1;
-            top: -18%;
+            top: -23%;
             left: 1%;
             fill: #000000;
         }
@@ -97,10 +97,12 @@
             &:not(:hover) {
                 animation: clickBoard 8s ease;
                 animation-iteration-count: infinite;
+                animation-delay: -1.3s;
 
                 .header__container-board-img--shade {
                     animation: clickShade 8s ease;
                     animation-iteration-count: infinite;
+                    animation-delay: -1.3s;
                 }
             }
 
@@ -112,11 +114,8 @@
                 }
 
                 .heading-primary--gradient {
-                    transform: scale(1.1);
-                    background-image: $gradient-text-lighter;
-                    background-size: 200% 200%;
-                    animation: colorText 5s ease-out;
-                    animation-iteration-count: infinite;
+                    transform: scale(1.03);
+                    background-image: $gradient-text;
                 }
             }
 
@@ -180,9 +179,17 @@
 }
 
 .siema {
-    fill: #ffffffff;
-    stroke: #000;
-    stroke-width: 5px;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
+    stroke-dashoffset: 10000;
+    stroke-dasharray: 10000;
+    animation: stroke 2s forwards ease; 
+}
+
+@keyframes stroke {
+    from {
+        stroke-dashoffset: 3000;
+        stroke-dasharray: 3000;
+    } to {
+        stroke-dashoffset: 40;
+        stroke-dasharray: 40;
+    }
 }

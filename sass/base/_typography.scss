@@ -16,12 +16,15 @@
         font-size: 5vw;
         font-weight: 700;
         display: block;
-        background-image: $gradient-text;
         color: black;
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
         transition: all .3s ease-in-out;
+        background-size: 200% 200%;
+        animation: colorText 5s ease-out;
+        animation-iteration-count: infinite;
+        background-image: $gradient-text-lighter;
     }
 
     span {
