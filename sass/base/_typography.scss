@@ -1,18 +1,15 @@
 .heading-primary {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Source Code Pro', monospace;
     font-weight: 300;
     font-size: 3.2vw;
-
-    &--main {
-        display: block;
-    }
+    position: relative;
 
     &--sub {
-        display: block;
         line-height: 1.1;
     }
 
     &--gradient {
+        font-family: 'Noto Sans', sans-serif;
         font-size: 5vw;
         font-weight: 700;
         display: block;
@@ -22,12 +19,81 @@
         -webkit-text-fill-color: transparent;
         transition: all .3s ease-in-out;
         background-size: 200% 200%;
-        animation: colorText 5s ease-out;
-        animation-iteration-count: infinite;
+        animation: colorText 5s ease-out infinite, scaleText .9s ease-out 4.15s forwards;
         background-image: $gradient-text-lighter;
+        opacity: 0;
     }
 
     span {
-        display: block;
+        position: relative;
+        display: inline-block;
+    }
+
+    &--main::after,
+    &--main::before,
+    &--main-2::after,
+    &--main-2::before,
+    &--sub::before,
+    &--sub::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    &--main::before {
+        background-color: $tw-bg;
+        animation: typeWritter $tw--speed steps($tw--steps) .2s forwards;
+    }
+
+    &--main::after {
+        animation: typeWritter $tw--speed steps($tw--steps) .2s forwards;
+    }
+
+    &--main-2::before {
+        background-color: $tw-bg;
+        animation: typeWritter $tw--speed-2 steps($tw--steps-2) 1.5s forwards;
+    }
+
+    &--main-2::after {
+        animation: typeWritter $tw--speed-2 steps($tw--steps-2) 1.5s forwards;
+    }
+
+    &--sub::before {
+        background-color: $tw-bg;
+        animation: typeWritter $tw--speed-sub steps($tw--steps-sub) 3s forwards;
+    }
+
+    &--sub::after {
+        animation: typeWritter $tw--speed-sub steps($tw--steps-sub) 3s forwards;
+    }
+}
+
+.siema {
+    font-size: 4rem;
+    display: inline-block;
+    position: relative;
+
+    &::after,
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    &::before {
+        background-color: $tw-bg;
+        animation: typeWritter $tw--speed steps($tw--steps) 1s forwards;
+    }
+
+    &::after {
+        width: .125rem;
+        background-color: black;
+        animation: typeWritter $tw--speed steps($tw--steps) 1s forwards, blink 750ms steps(2) infinite;
     }
 }

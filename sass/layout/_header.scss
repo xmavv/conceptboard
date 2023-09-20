@@ -33,6 +33,14 @@
                 margin: 0 1.5rem;
                 text-decoration: none;
 
+                &:hover {
+                    color: #eee;
+
+                    &:not(:last-child) {
+                        color: #505050;
+                    }
+                }
+
                 &:not(:last-child) {
                     color: black;
                 }
@@ -56,7 +64,8 @@
                     -webkit-text-fill-color: transparent;
                     transition: all .2s ease-in-out;
 
-                    &:hover {
+                    &:hover,
+                    &:focus {
                         padding: .7rem 1.1rem;
                         background-color: $color-primary-dark;
                         border-radius: 2rem;
@@ -70,20 +79,24 @@
                 margin-left: 4rem;
             }
         }
+
+        &-language {
+            margin-right: 3rem;
+        }
     }
     
     &__container {
         position: relative;
+        // margin-top: 13rem;
+        // height: 70rem;
         margin-top: 7vh;
         height: 88vh;
 
         &-line {
             position: absolute;
-            width: 100%;
             z-index: -1;
-            top: -23%;
+            top: -15vh;
             left: 1%;
-            fill: #000000;
         }
 
         &-board {
@@ -97,12 +110,12 @@
             &:not(:hover) {
                 animation: clickBoard 8s ease;
                 animation-iteration-count: infinite;
-                animation-delay: -1.3s;
+                animation-delay: .6s;
 
                 .header__container-board-img--shade {
                     animation: clickShade 8s ease;
                     animation-iteration-count: infinite;
-                    animation-delay: -1.3s;
+                    animation-delay: .6s;
                 }
             }
 
@@ -182,14 +195,4 @@
     stroke-dashoffset: 10000;
     stroke-dasharray: 10000;
     animation: stroke 2s forwards ease; 
-}
-
-@keyframes stroke {
-    from {
-        stroke-dashoffset: 3000;
-        stroke-dasharray: 3000;
-    } to {
-        stroke-dashoffset: 40;
-        stroke-dasharray: 40;
-    }
 }

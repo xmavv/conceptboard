@@ -47,6 +47,27 @@
     top: -2%;
     left: 2%; } }
 
+@keyframes stroke {
+  from {
+    stroke-dashoffset: 3000;
+    stroke-dasharray: 3000; }
+  to {
+    stroke-dashoffset: 40;
+    stroke-dasharray: 40; } }
+
+@keyframes typeWritter {
+  to {
+    left: 100%; } }
+
+@keyframes scaleText {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.08); }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
+
 *,
 *::after,
 *::before {
@@ -63,15 +84,14 @@ body {
   background-size: cover; }
 
 .heading-primary {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Source Code Pro', monospace;
   font-weight: 300;
-  font-size: 3.2vw; }
-  .heading-primary--main {
-    display: block; }
+  font-size: 3.2vw;
+  position: relative; }
   .heading-primary--sub {
-    display: block;
     line-height: 1.1; }
   .heading-primary--gradient {
+    font-family: 'Noto Sans', sans-serif;
     font-size: 5vw;
     font-weight: 700;
     display: block;
@@ -81,11 +101,53 @@ body {
     -webkit-text-fill-color: transparent;
     transition: all .3s ease-in-out;
     background-size: 200% 200%;
-    animation: colorText 5s ease-out;
-    animation-iteration-count: infinite;
-    background-image: linear-gradient(to right, #18e2f8, #ff0deb); }
+    animation: colorText 5s ease-out infinite, scaleText .9s ease-out 4.15s forwards;
+    background-image: linear-gradient(to right, #18e2f8, #ff0deb);
+    opacity: 0; }
   .heading-primary span {
-    display: block; }
+    position: relative;
+    display: inline-block; }
+  .heading-primary--main::after, .heading-primary--main::before, .heading-primary--main-2::after, .heading-primary--main-2::before, .heading-primary--sub::before, .heading-primary--sub::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  .heading-primary--main::before {
+    background-color: white;
+    animation: typeWritter 1.2s steps(15) 0.2s forwards; }
+  .heading-primary--main::after {
+    animation: typeWritter 1.2s steps(15) 0.2s forwards; }
+  .heading-primary--main-2::before {
+    background-color: white;
+    animation: typeWritter 1.3s steps(21) 1.5s forwards; }
+  .heading-primary--main-2::after {
+    animation: typeWritter 1.3s steps(21) 1.5s forwards; }
+  .heading-primary--sub::before {
+    background-color: white;
+    animation: typeWritter 1s steps(11) 3s forwards; }
+  .heading-primary--sub::after {
+    animation: typeWritter 1s steps(11) 3s forwards; }
+
+.siema {
+  font-size: 4rem;
+  display: inline-block;
+  position: relative; }
+  .siema::after, .siema::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+  .siema::before {
+    background-color: white;
+    animation: typeWritter 1.2s steps(15) 1s forwards; }
+  .siema::after {
+    width: .125rem;
+    background-color: black;
+    animation: typeWritter 1.2s steps(15) 1s forwards, blink 750ms steps(2) infinite; }
 
 .u-margin-bottom-medium {
   margin-bottom: 5rem; }
@@ -115,7 +177,7 @@ body {
   background-color: #005bbc;
   border-radius: 2rem;
   transition: all .2s ease-in-out; }
-  .btn:hover {
+  .btn:hover, .btn:focus {
     background-color: #29abe2; }
 
 .animate {
@@ -126,6 +188,11 @@ body {
   animation: smoothShake 7s ease-in-out infinite;
   animation-fill-mode: both;
   animation-direction: reverse; }
+
+.stroke {
+  stroke-dashoffset: 10000;
+  stroke-dasharray: 10000;
+  animation: stroke 2s forwards ease; }
 
 .header {
   height: 100vh;
@@ -154,6 +221,10 @@ body {
       .header__nav-text a {
         margin: 0 1.5rem;
         text-decoration: none; }
+        .header__nav-text a:hover {
+          color: #eee; }
+          .header__nav-text a:hover:not(:last-child) {
+            color: #505050; }
         .header__nav-text a:not(:last-child) {
           color: black; }
         .header__nav-text a:nth-child(5) {
@@ -172,7 +243,7 @@ body {
           background-clip: text;
           -webkit-text-fill-color: transparent;
           transition: all .2s ease-in-out; }
-          .header__nav-text a:nth-child(6):hover {
+          .header__nav-text a:nth-child(6):hover, .header__nav-text a:nth-child(6):focus {
             padding: .7rem 1.1rem;
             background-color: #005bbc;
             border-radius: 2rem;
@@ -180,17 +251,17 @@ body {
             border-right: 3px solid #005bbc; }
       .header__nav-text-img {
         margin-left: 4rem; }
+    .header__nav-language {
+      margin-right: 3rem; }
   .header__container {
     position: relative;
     margin-top: 7vh;
     height: 88vh; }
     .header__container-line {
       position: absolute;
-      width: 100%;
       z-index: -1;
-      top: -23%;
-      left: 1%;
-      fill: #000000; }
+      top: -15vh;
+      left: 1%; }
     .header__container-board {
       position: relative;
       width: 45%;
@@ -201,11 +272,11 @@ body {
       .header__container-board:not(:hover) {
         animation: clickBoard 8s ease;
         animation-iteration-count: infinite;
-        animation-delay: -1.3s; }
+        animation-delay: .6s; }
         .header__container-board:not(:hover) .header__container-board-img--shade {
           animation: clickShade 8s ease;
           animation-iteration-count: infinite;
-          animation-delay: -1.3s; }
+          animation-delay: .6s; }
       .header__container-board:hover {
         transform: translate(-52%, -48%); }
         .header__container-board:hover .header__container-board-img--shade {
@@ -256,11 +327,3 @@ body {
   stroke-dashoffset: 10000;
   stroke-dasharray: 10000;
   animation: stroke 2s forwards ease; }
-
-@keyframes stroke {
-  from {
-    stroke-dashoffset: 3000;
-    stroke-dasharray: 3000; }
-  to {
-    stroke-dashoffset: 40;
-    stroke-dasharray: 40; } }

@@ -65,3 +65,36 @@
         left: 2%;
     }
 }
+
+@keyframes stroke {
+    from {
+        stroke-dashoffset: 3000;
+        stroke-dasharray: 3000;
+    } to {
+        stroke-dashoffset: 40;
+        stroke-dasharray: 40;
+    }
+}
+
+@keyframes typeWritter {
+    to {
+        left: 100%;
+    }
+}
+
+// @keyframes blink {
+//     to {
+//         background-color: transparent;
+//     }
+// }
+
+@keyframes scaleText {
+    0% {
+        transform: scale(1);
+    } 50% {
+        transform: scale(1.08);
+    } 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

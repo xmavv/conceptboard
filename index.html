@@ -6,8 +6,10 @@
     <link rel="stylesheet" href="https://use.typekit.net/bbb8ojv.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&family=Space+Grotesk:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
     </style>
     <link rel="stylesheet" href="css/style.css">
+    <script src="app.js" defer></script>
     <title>Conceptboard!</title>
 </head>
 <body>
@@ -19,7 +21,11 @@
                 <a href="https://www.behance.net/gallery/178040589/Conceptboard-redesign" target="_blank">Security</a>
                 <a href="https://www.behance.net/gallery/178040589/Conceptboard-redesign" target="_blank">Company</a>
                 <img src="img/png/eng.png" alt="" class="header__nav-text-img">
-                <a href="https://www.behance.net/gallery/178040589/Conceptboard-redesign" target="_blank">ENG</a> 
+                <select name="language" id="language" class="header__nav-language">
+                    <option value="ENG" selected>ENG</option>
+                    <option value="GER">GER</option>
+                    <!-- <option value="GER">POL</option> -->
+                </select>
                 <a href="https://www.behance.net/gallery/178040589/Conceptboard-redesign" target="_blank">Log in</a>
                 <a href="https://www.behance.net/gallery/178040589/Conceptboard-redesign" target="_blank" class="btn">Sing up</a>
             </div>
@@ -28,13 +34,12 @@
 
         <div class="header__container">
             <div class="header__container-line">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1920px" height="2167.519px" viewBox="0 0 1920 2167.519" enable-background="new 0 0 1920 2167.519" xml:space="preserve">
-                <g id="bg">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100vw" viewBox="0 0 1920 2167.519" enable-background="new 0 0 1920 2167.519" xml:space="preserve">
                     <g id="particles">
                         <g>
                             <g>
-                                <path class="siema" fill="none" stroke="#EF990F" stroke-width="7" stroke-miterlimit="10" d="M150.76,144.78c0,0-3.888,2.017-10.247,6.235"/>
-                                <path class="siema" fill="none" stroke="#EF990F" stroke-width="7" stroke-miterlimit="10" stroke-dasharray="24.1315,24.1315" d="
+                                <path class="stroke" fill="none" stroke="#EF990F" stroke-width="7" stroke-miterlimit="10" d="M150.76,144.78c0,0-3.888,2.017-10.247,6.235"/>
+                                <path class="stroke" fill="none" stroke="#EF990F" stroke-width="7" stroke-miterlimit="10" stroke-dasharray="24.1315,24.1315" d="
                                     M121.208,165.474c-36.215,30.251-92.22,95.269-87.139,205.456c6.273,136.022,235.308,208.318,403.825,218.42
                                     c86.044,5.158,171.911,12.87,257.443,23.568c183.653,22.972,475,48.979,663.567,13.979
                                     c2.373-0.44,629.081-145.488,449.24,377.85c-34.736,101.083-59.696,110.267-135.066,216.212
@@ -42,7 +47,6 @@
                             </g>
                         </g>
                     </g>
-                </g>
 </svg>
             </div>
 
@@ -52,12 +56,13 @@
 
                 <div class="header__container-text u-margin-top-small-res">
                     <h1 class="heading-primary">
-                        <span class="heading-primary--main u-margin-bottom-medium-res">Give Your ideas <span>a safe place to grow.</span></span>
+                        <span class="heading-primary--main">Give Your ideas</span>
+                        <span class="heading-primary--main-2 u-margin-bottom-medium-res">a safe place to grow.</span>
                         <span class="heading-primary--sub">
                             Give them a
-                            <span class="heading-primary--gradient">
-                                Conceptboard
-                            </span>
+                        </span>
+                        <span class="heading-primary--gradient">
+                            Conceptboard
                         </span>
                     </h1>
                 </div>
